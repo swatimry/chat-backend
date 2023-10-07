@@ -52,5 +52,5 @@ socket.on('disconnect',()=>{
 
 app.use(router);
 server.listen(PORT,function(){
-    console.log("server started");
+    console.log(`server started ${PORT}`);
 }) 
