@@ -1,5 +1,6 @@
 //importing necessary libraries and files
 const express=require("express");
+require('dotenv').config();
 const socketio=require("socket.io");
 const http=require("http");
 const router=require("./router");
@@ -14,7 +15,7 @@ app.use(cors());
 const server=http.createServer(app); 
 const io=socketio(server,{
     cors:{
-        origin:"http://localhost:3000",
+        origin: process.env.FRONTEND_URL ||"http://localhost:3000",
         methods:["GET","POST"]
     }
 }); //socketinstance
