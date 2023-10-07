@@ -16,7 +16,9 @@ const server=http.createServer(app);
 const io=socketio(server,{
     cors:{
         origin: [process.env.FRONTEND_URL,"http://localhost:3000"],
-        methods:["GET","POST"]
+        methods:["GET","POST"],
+        allowedHeaders: ["my-custom-header"],
+    credentials: true
     }
 }); //socketinstance
 
