@@ -15,7 +15,7 @@ app.use(cors());
 const server=http.createServer(app); 
 const io=socketio(server,{
     cors:{
-        origin: [process.env.FRONTEND_URL,"http://localhost:3000"],
+        origin: "https://darling-valkyrie-1752de.netlify.app",
         methods:["GET","POST"],
         allowedHeaders: ["my-custom-header"],
     credentials: true
