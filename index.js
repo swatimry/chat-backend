@@ -15,7 +15,7 @@ app.use(cors());
 const server=http.createServer(app); 
 const io=socketio(server,{
     cors:{
-        origin: "https://darling-valkyrie-1752de.netlify.app",
+        origin: "https://react-chatapp-sockets.netlify.app",
         methods:["GET","POST"],
         allowedHeaders: ["my-custom-header"],
     credentials: true
